@@ -1,30 +1,46 @@
+<h1 align="center" id="title">Currency convertor</h1>
 
-<h1 align="center" id="title">Currency Convertor</h1>
-
-<p align="center"><img src="https://socialify.git.ci/Manish-Yadav77/Bmi-calculator/image?font=Rokkitt&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Circuit%20Board&amp;stargazers=1&amp;theme=Dark" alt="project-image"></p>
-
-<p id="description">Bmi-Calculator to calculate your Bmi at any time by just knowing your height in cm and your weight in kg</p>
+<p align="center"><img src="https://socialify.git.ci/Manish-Yadav77/Currency_Convertor/image?font=Bitter&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Floating+Cogs&amp;stargazers=1&amp;theme=Dark" alt="project-image"></p>
 
 <h2>🚀 Demo</h2>
-[https://bmikalculator.netlify.app/]
+
+[https://currencyconvertorss.netlify.app/](https://currencyconvertorss.netlify.app/)
+
   
   
 <h2>🧐 Features</h2>
 
 Here're some of the project's best features:
 
-*   BMI calculation
-*   BMI ranges
+*   Convert to any currency
+*   Real-time exchange rates
+*   Automatic currency switching
 
 <h2>🛠️ Installation Steps:</h2>
 
-<p>1. install Html and node Js first in your system</p>
+<p>1. Install vite</p>
 
-<p>2. install vs code in your system</p>
+```
+npm create vite@latest
+```
 
-<p>3. add html js css extensions in vs code (visual studio code)</p>
+<p>2. Install Node js</p>
 
-<p>4. now run the program by clicking on live server</p>
+```
+npm i
+```
+
+<p>3. Install Tailwind css</p>
+
+```
+check website for tailwind
+```
+
+<p>4. now run the program</p>
+
+```
+npm run dev
+```
 
   
   
@@ -32,10 +48,11 @@ Here're some of the project's best features:
 
 Technologies used in the project:
 
-*   HTML
-*   JS
-*   CSS
+*   Vite + React
+*   node
+*   Tailwind css
+*   js (javaScript)
 
 <h2>💖Like my work?</h2>
 
-Just give the stars...
+Just give the Stars...
