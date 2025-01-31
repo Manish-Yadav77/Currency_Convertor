@@ -2,6 +2,9 @@
 
 <p align="center"><img src="https://socialify.git.ci/Manish-Yadav77/Currency_Convertor/image?font=Bitter&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Floating+Cogs&amp;stargazers=1&amp;theme=Dark" alt="project-image"></p>
 
+<p id="description">This React application is a user-friendly currency converter that allows users to instantly convert amounts between various international currencies using live exchange rates fetched from an external API. It features intuitive input fields for selecting source and target currencies, real-time updates based on market fluctuations, and a clear display of the converted amount, making it a convenient tool for travelers and anyone needing to calculate cross-currency values.</p>
+
+
 <h2>🚀 Demo</h2>
 
 [https://currencyconvertorss.netlify.app/](https://currencyconvertorss.netlify.app/)
