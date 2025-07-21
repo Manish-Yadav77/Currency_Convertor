@@ -11,33 +11,39 @@ function App() {
 
   const { data: currencyData, error } = useCurrencyInfo(fromCurrency)
 
-  const handleSwap = () => {
-    setFromCurrency(toCurrency)
-    setToCurrency(fromCurrency)
-    setConvertedAmount(amount)
-    setAmount(convertedAmount)
-  }
+  const currencyOptions = currencyData ? Object.keys(currencyData) : []
 
   const handleConvert = () => {
     if (!currencyData || !currencyData[toCurrency]) {
-      alert("Conversion rate not available.")
+      alert("Conversion data not available.")
       return
     }
     const rate = currencyData[toCurrency]
     setConvertedAmount((amount * rate).toFixed(2))
   }
 
-  const currencyOptions = currencyData ? Object.keys(currencyData) : []
+  const handleSwap = () => {
+    setFromCurrency(toCurrency)
+    setToCurrency(fromCurrency)
+    setAmount(convertedAmount)
+    setConvertedAmount(amount)
+  }
 
-  if (error) return <p className="text-red-500 text-center mt-10">Error: {error}</p>
+  if (error) return <p className="text-red-500 text-center mt-10">{error}</p>
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-sky-500 to-indigo-600 p-4">
-      <div className="bg-white/30 backdrop-blur-xl rounded-2xl p-8 shadow-lg w-full max-w-xl">
-        <h1 className="text-2xl font-bold text-white text-center mb-6">
-          🌐 Currency Converter
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
+      <div className="w-full max-w-lg bg-white rounded-2xl shadow-lg p-6">
+        <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">
+          💱 Currency Converter
         </h1>
-        <form onSubmit={(e) => { e.preventDefault(); handleConvert() }}>
+
+        <form
+          onSubmit={(e) => {
+            e.preventDefault()
+            handleConvert()
+          }}
+        >
           <InputBox
             label="From"
             amount={amount}
@@ -50,25 +56,25 @@ function App() {
           <div className="flex justify-center my-4">
             <button
               type="button"
-              className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
               onClick={handleSwap}
+              className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
             >
-              🔄 Swap
+              🔁 Swap
             </button>
           </div>
 
           <InputBox
             label="To"
             amount={convertedAmount}
+            amountDisable
             selectCurrency={toCurrency}
             onCurrencyChange={(val) => setToCurrency(val)}
             currencyOptions={currencyOptions}
-            amountDisable
           />
 
           <button
             type="submit"
-            className="mt-6 w-full bg-green-600 text-white py-3 rounded-lg text-lg font-semibold hover:bg-green-700 transition"
+            className="w-full mt-6 bg-green-600 text-white py-3 rounded-md font-medium hover:bg-green-700 transition"
           >
             Convert {fromCurrency} to {toCurrency}
           </button>
